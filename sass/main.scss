@@ -18,14 +18,121 @@
 @import "./pages/about";
 @import "./pages/project";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-menu:rgb(247, 244, 244);
+$color-shadow: #d5d9db;
 
 $text-font: "Roboto", sans-serif;
 $logo-title-font: "Shrikhand", arial;
 
+@mixin btn {
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    color: white;
+    padding: 1em 1.3em ;
+    border-radius: 10rem;
+    border: none;
+    box-shadow: 1px 5px 10px 1px $color-shadow;
+}
+@mixin bright-btn {
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    filter: brightness(1.15);
+    box-shadow: 1px 5px 10px 5px grey;
+}
+@mixin bright-menu {
+    background-color:#f2eafb;
+}
+@mixin icone-hover {
+    color: $color-primary;
+}
+@mixin box-shadow {
+    box-shadow: 1px 5px 10px 1px $color-shadow;
+}
+body{
+    font-family: $text-font;
+    margin: 0;
+}
 #logo_header {
     text-align: center;
     font-family: $logo-title-font;
+    margin-bottom: 8px;
+}
+#localisation {
+    display: flex;
+    background-color: #e9e9e9;
+    box-shadow: inset 0 5px 10px $color-shadow;
+    padding: 15px;
+    justify-content: center;
+}
+.fa-map-marker-alt {
+    margin-right: 10px;
+}
+#Rechercher
+{
+    background-color: #e9e9e9;
+    border: none;
+}
+#introduction {
+    background-color: $color-menu;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    h2{
+        margin: none;
+    }
+    p{
+        color: grey;
+        padding-bottom: 20px;
+        margin: 10px
+    }
+}
+.explore{
+    @include btn;
+    &:hover{
+        @include bright-btn;
+    }
+}
+#fonctionnement
+{
+    padding-top: 20px;
+    margin-left: 15px;
+}
+.button__fonct-menu{
+    display: flex;
+    align-items: baseline;
+    background-color: $color-menu;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 12px;
+    padding: 5px 30px 5px;
+    box-shadow: 1px 5px 10px 1px $color-shadow;
+    &:hover{
+        @include bright-menu;
+        &:hover .fonct-menu__logo{
+            @include icone-hover;
+        }
+    }
+    .fonct-menu__num{
+        color: white;
+        background-color: $color-primary;
+        padding: 0.2em 0.5em;
+        border-radius: 50%;
+        margin-right: 20px;
+        position: absolute;
+        left: 20px;
+        margin-top: 16px;
+        font-size: 0.8em;
+    }
+    .fonct-menu__logo{
+        margin-right: 20px;
+        color: grey;
+    }
+    .fonct-menu__titre{
+        color: black;
+    }
 }
