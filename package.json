@@ -1,0 +1,20 @@
+{
+  "name": "cedricfrapier_3_10082021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricfp/CedricFrapier_3_10082021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cedricfp/CedricFrapier_3_10082021/issues"
+  },
+  "homepage": "https://github.com/cedricfp/CedricFrapier_3_10082021#readme"
+}
+
