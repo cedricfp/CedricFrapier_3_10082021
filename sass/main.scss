@@ -40,7 +40,7 @@ $logo-title-font: "Shrikhand", arial;
 }
 @mixin bright-btn {
     background: linear-gradient(170deg, $color-secondary, $color-primary);
-    filter: brightness(1.15);
+    opacity: 0.8;
     box-shadow: 1px 5px 10px 5px grey;
 }
 @mixin bright-menu {
@@ -52,9 +52,86 @@ $logo-title-font: "Shrikhand", arial;
 @mixin box-shadow {
     box-shadow: 1px 5px 10px 1px $color-shadow;
 }
+@mixin hoverlike {
+    background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes load {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+      -webkit-transform: translateX(-300px);
+    }
+    33% {
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+    }
+    66% {
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(300px);
+      -webkit-transform: translateX(300px);
+    }
+  }
+  
 body{
     font-family: $text-font;
     margin: 0;
+}
+.loader{
+    font-family: $logo-title-font;
+    position: fixed;
+    z-index: 99999;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    transition: 3s;
+    background-color: #FFF;
+    .loader-inner{
+        transform: translateY(-50%);
+        top: 50%;
+        position: absolute;
+        width: calc(100% - 200px);
+        color: black;
+        padding: 0 100px;
+        text-align: center;
+        label {
+            font-size: 2em;
+            opacity: 0;
+            display:inline-block;
+        }
+        label:nth-child(4){
+            -webkit-animation: load 3s 200ms infinite ease-in-out;
+            animation: load 3s 200ms infinite ease-in-out;
+            color: $color-tertiary;
+        }
+        label:nth-child(3){
+            -webkit-animation: load 3s 300ms infinite ease-in-out;
+            animation: load 3s 300ms infinite ease-in-out;
+            color: $color-secondary;
+        }
+        label:nth-child(2){
+            -webkit-animation: load 3s 400ms infinite ease-in-out;
+            animation: load 3s 400ms infinite ease-in-out;
+            color: $color-primary;
+        }
+        label:nth-child(1){
+            -webkit-animation: load 3s 500ms infinite ease-in-out;
+            animation: load 3s 500ms infinite ease-in-out;
+            @include hoverlike;
+        }
+    }
 }
 a:link
 {
@@ -144,6 +221,7 @@ a:link
 #restaurants{
     background-color: $color-menu;
     padding-top: 20px;
+    padding-bottom: 40px;
     h2{
         margin: 20px;
     }
@@ -187,11 +265,24 @@ a:link
         }
         .projet-omf__stars--k{
             font-size: 25px;
+            position: absolute;
+            right: 35px;
             .icone-vide{
-                color: #333;
+                color: #4b4b4b;
+                position: absolute;
+                &:hover{
+                @include hoverlike;
+                }
             }
             .icone-plein{
-                color: linear-gradient(170deg, $color-secondary, $color-primary);
+                @include hoverlike;
+                transform: scale(0);
+                transition: transform 0.5s;
+                &:hover{
+                    transform: scale(1);
+                    
+                    
+                }
             }
         } 
     }
