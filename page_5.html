@@ -2,29 +2,33 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="stylesheet.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=".public/css/style.css"/>
         <title>ohmyfood!</title>
         <link href="fontawesome/css/all.css" rel="stylesheet">
     </head>
 
     <body>
-        <div id="bloc_page_carte">
+        <div id="bloc-page-carte">
             <header>
                 <a href="index.html">
-                <i class="fas fa-arrow-left"></i></a>
+                <i class="retour fas fa-arrow-left"></i></a>
                 <h2 id="logo_header">
                     ohmyfood
                 </h2>
             </header>
 
-            <div id="carte_image">
+            <div id="carte-image">
                 <img src="images/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">
             </div>
 
-            <div id="carte_menu">
-                <div id="carte_titre">
+            <div id="carte-menu">
+                <div class="carte-menu__titre">
                     <h2>Le délice des sens</h2>
-                    <i class="far fa-heart"></i>
+                    <div class="carte-menu__titre--heart">
+                        <i class="icone-vide far fa-heart"></i>
+                        <i class="icone-plein fas fa-heart"></i>
+                    </div>
                 </div>
                 <p class="epd">ENTRÉES</p>
                 <div class="suggestion">
@@ -116,15 +120,17 @@
                 </button>
             </div>
             <footer>
-                <div id="footer_content">
-                   <img src="images/logo/ohmyfood.png" alt="logo_footer">
-                     <ul>
+                <div id="footer-content">
+                     <p class="footer-content__logo">
+                         ohmyfood
+                     </p>
+                     <ul class="footer-content__list">
                          <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
                          <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
                          <li>Mentions légales</li>
-                         <li>Contact</li>
+                         <li><a href="mailto:cedricfrapier@gmail.com"> Contact</a></li>
                      </ul>   
                  </div> 
-            </footer>
+             </footer>
         </div>
     </body>
