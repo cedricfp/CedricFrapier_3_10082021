@@ -268,19 +268,17 @@ a:link
         .projet-omf__stars--k{
             font-size: 25px;
             color: $color-souris;
-            position: absolute;
-            right: 35px;
             cursor: pointer;
             .icone-vide{
                 position: absolute;
-                right: 5px;
+                right: 35px;
                 margin-top: -16px;
             }
             .icone-plein{
                 position: absolute;
                 color: transparent;
                 font-size: 27px;
-                right: 4px;
+                right: 34px;
                 margin-top: -16px;
                 transform: scale(0.4);
                 transition: transform 0.5s;
@@ -445,6 +443,160 @@ a:link
         cursor: pointer;
         &:hover{
             @include bright-btn;
+        }
+    }
+}
+@media screen and (min-width : 1100px){
+    .loader{
+        .loader-inner{
+            label{
+                font-size: 4em;
+            }
+        }
+    }
+    #fonctionnement{
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 0px;
+        margin: auto;
+    }
+    .button__fonct-menu{
+        margin-bottom: 0px;
+        padding-top: 8px;
+        .fonct-menu__num{
+            position: inherit;
+    
+        }
+
+    }
+    
+    #restaurants{
+        display: flex;
+        justify-content: space-around;
+        padding: 70px 10px 50px 10px;
+        h2{
+            position: absolute;
+            left: 22px;
+            margin-top: -2.7rem;
+        }
+        .projet-omf{
+            img{
+                width: 250px;
+            }
+            .projet-omf__banniere{
+                position: absolute;
+                right: auto;
+            }
+            .projet-omf__legende{
+                .projet-omf__stars--k{
+                    position: relative;
+                }
+            }
+        }
+    }
+    #footer-content {
+        text-align: center;
+        .footer-content__logo{
+            font-size: 1.6em;
+        }
+        .footer-content__list{
+            font-size: 1em;
+        }
+    }
+    .pagemenu{
+        .epd{
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                background: $color-tertiary;
+                width: 4%;
+                margin-top: 5px;
+            }
+        }
+        .menu-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .suggestion{
+            width: 30%;
+        }
+        
+    }
+    
+
+
+}
+@media screen and (min-width : 768px) and (max-width : 1100px){
+    .loader{
+        .loader-inner{
+            label{
+                font-size: 3em;
+            }
+        }
+    }
+    #fonctionnement{
+        width: 40%;
+        margin: auto;
+        h2{
+            text-align: center;
+        }
+        .button__fonct-menu{
+            display: flex;
+            justify-content: space-around;
+            .fonct-menu__num{
+                position: inherit;
+            }
+        }
+    }
+    #restaurants{
+        padding: 70px 10px 50px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        h2{
+            position: absolute;
+            margin-top: -43px;
+        }
+        .projet-omf{
+            .projet-omf__banniere{
+                position: absolute;
+                right: auto;
+            }
+            .projet-omf__legende{
+                .projet-omf__stars--k{
+                    position: relative;
+                }
+            }
+        }
+    }
+    #footer-content {
+        text-align: center;
+        .footer-content__logo{
+            font-size: 1.6em;
+        }
+        .footer-content__list{
+            font-size: 1em;
+        }
+    }
+    .pagemenu{
+        .epd{
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                background: $color-tertiary;
+                width: 5%;
+                margin-top: 5px;
+            }
+        }
+        .menu-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .suggestion{
+            width: 40%;
         }
     }
 }
