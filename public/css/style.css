@@ -465,14 +465,15 @@ a:link {
     left: 22px;
     margin-top: -2.7rem;
   }
-  #restaurants .projet-omf img {
+
+  .projet-omf img {
     width: 250px;
   }
-  #restaurants .projet-omf .projet-omf__banniere {
+  .projet-omf .projet-omf__banniere {
     position: absolute;
     right: auto;
   }
-  #restaurants .projet-omf .projet-omf__legende .projet-omf__stars--k {
+  .projet-omf .projet-omf__legende .projet-omf__stars--k {
     position: relative;
   }
 

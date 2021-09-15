@@ -479,20 +479,21 @@ a:link
             left: 22px;
             margin-top: -2.7rem;
         }
-        .projet-omf{
-            img{
-                width: 250px;
-            }
-            .projet-omf__banniere{
-                position: absolute;
-                right: auto;
-            }
-            .projet-omf__legende{
-                .projet-omf__stars--k{
-                    position: relative;
-                }
+    }
+    .projet-omf{
+        img{
+            width: 250px;
+        }
+        .projet-omf__banniere{
+            position: absolute;
+            right: auto;
+        }
+        .projet-omf__legende{
+            .projet-omf__stars--k{
+                position: relative;
             }
         }
+        
     }
     #footer-content {
         text-align: center;
