@@ -382,7 +382,7 @@ a:link {
   overflow: hidden;
 }
 .pagemenu .suggestion:hover {
-  flex-basis: 20%;
+  flex-basis: 80%;
 }
 .pagemenu .suggestion:hover > .suggestion__like {
   visibility: visible;
@@ -392,7 +392,7 @@ a:link {
 }
 .pagemenu .suggestion:hover > .suggestion__like .suggestion__like--check {
   transform: rotate(360deg);
-  transition-duration: 750ms;
+  transition-duration: 1s;
 }
 .pagemenu .suggestion .suggestion__like {
   background-color: #99e2d0;
