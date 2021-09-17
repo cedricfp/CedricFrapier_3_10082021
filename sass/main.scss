@@ -70,17 +70,18 @@ $logo-title-font: "Shrikhand", arial;
         transform: translateX(1);
     }
 }
-@keyframes fadein {
+@keyframes epd{
     0%{
         transform: translateY(-50%);
         opacity: 0;
-        animation-delay: 100ms;
+        
     }
     100%{
         transform: translateY(0%);
         opacity: 1;
-        animation-delay: 100ms;
+        
     }
+    
 }
 
   
@@ -386,25 +387,45 @@ a:link
             margin-top: 5px;
         }
     }
+    .menu-box-entrées{
+        animation: epd 700ms ease-in;
+        -moz-animation: epd 700ms ease-in;
+        -webkit-animation: epd 700ms ease-in;
+        animation-delay: 100ms;
+    }
+    .menu-box-plats{
+        animation: epd 700ms ease-in;
+        -moz-animation: epd 700ms ease-in;
+        -webkit-animation: epd 700ms ease-in;
+        animation-delay: 500ms;
+    }
+    .menu-box-desserts{
+        animation: epd 700ms ease-in;
+        -moz-animation: epd 700ms ease-in;
+        -webkit-animation: epd 700ms ease-in;
+        animation-delay: 1000ms;
+    }
+    
     
     .suggestion{
         @include box-shadow;
         border-radius: 15px;
         margin: 10px 0px 15px 0px;
         padding: 10px;
-        animation: fadein 1s ease-in;
-        -webkit-animation: fadein 1s ease-in;
-        -moz-animation: fadein 1s ease-in ;
         position: relative;
         overflow: hidden;
-        &:hover{
-            flex-basis: 20%;
+        &:hover > .suggestion__description{
+            width: 80%;
+            overflow: hidden;
+            transform: translateX(-1%);
+            transition: transform 2s ease-in;
+            
         }
+        
         &:hover > .suggestion__like{
             visibility: visible;
             transform: translateX(-100%);
             transition: transform 0.5s ease-in;
-            flex-basis: 20%;
             .suggestion__like--check{
                 transform: rotate(360deg);
                 transition-duration: 750ms;
@@ -419,6 +440,7 @@ a:link
             margin-top: -9.5px;
             border-radius: 0px 10px 10px 0px;
             visibility: hidden;
+            flex-basis: 20%;
             
             
             .suggestion__like--check{
@@ -437,11 +459,19 @@ a:link
             display: flex;
             justify-content: space-between;
             margin-right: 10px;
+            .legende{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .prix{
+                position: relative;
+            }
             p{
                 margin-block: auto;
                 font-size: 0.9em;
             }
         }
+        
     }
     .order{
         @include btn;
@@ -524,7 +554,7 @@ a:link
                 margin-top: 5px;
             }
         }
-        .menu-box{
+        .menu-box-entrées, .menu-box-plats, .menu-box-desserts{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -600,7 +630,7 @@ a:link
                 margin-top: 5px;
             }
         }
-        .menu-box{
+        .menu-box-entrées, .menu-box-plats, .menu-box-desserts{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
