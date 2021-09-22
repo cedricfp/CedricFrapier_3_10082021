@@ -76,23 +76,23 @@ body {
   display: inline-block;
 }
 .loader .loader-inner label:nth-child(4) {
-  -webkit-animation: load 3s 200ms infinite ease-in-out;
-  animation: load 3s 200ms infinite ease-in-out;
+  -webkit-animation: load 3s 200ms infinite ease-in-out forwards;
+  animation: load 3s 200ms infinite ease-in-out forwards;
   color: #99e2d0;
 }
 .loader .loader-inner label:nth-child(3) {
-  -webkit-animation: load 3s 300ms infinite ease-in-out;
-  animation: load 3s 300ms infinite ease-in-out;
+  -webkit-animation: load 3s 300ms infinite ease-in-out forwards;
+  animation: load 3s 300ms infinite ease-in-out forwards;
   color: #ff79da;
 }
 .loader .loader-inner label:nth-child(2) {
-  -webkit-animation: load 3s 400ms infinite ease-in-out;
-  animation: load 3s 400ms infinite ease-in-out;
+  -webkit-animation: load 3s 400ms infinite ease-in-out forwards;
+  animation: load 3s 400ms infinite ease-in-out forwards;
   color: #9356dc;
 }
 .loader .loader-inner label:nth-child(1) {
-  -webkit-animation: load 3s 500ms infinite ease-in-out;
-  animation: load 3s 500ms infinite ease-in-out;
+  -webkit-animation: load 3s 500ms infinite ease-in-out forwards;
+  animation: load 3s 500ms infinite ease-in-out forwards;
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -403,11 +403,13 @@ a:link {
   width: 80%;
   overflow: hidden;
   transform: translateX(-1%);
+  -webkit-transform: translateX(-1%);
   transition: transform 2s ease-in;
 }
 .pagemenu .suggestion:hover > .suggestion__like {
   visibility: visible;
   transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
   transition: transform 0.5s ease-in;
 }
 .pagemenu .suggestion:hover > .suggestion__like .suggestion__like--check {
@@ -436,6 +438,10 @@ a:link {
 .pagemenu .suggestion .suggestion__plat {
   margin-bottom: 5px;
 }
+.pagemenu .suggestion .suggestion__plat .titre {
+  font-weight: 900;
+  margin: 0;
+}
 .pagemenu .suggestion .suggestion__description {
   display: flex;
   justify-content: space-between;
@@ -444,6 +450,7 @@ a:link {
 .pagemenu .suggestion .suggestion__description .legende {
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 .pagemenu .suggestion .suggestion__description .prix {
   position: relative;

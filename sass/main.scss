@@ -73,15 +73,12 @@ $logo-title-font: "Shrikhand", arial;
 @keyframes epd{
     0%{
         transform: translateY(-50%);
-        opacity: 0;
-        
+        opacity: 0; 
     }
     100%{
         transform: translateY(0%);
-        opacity: 1;
-        
-    }
-    
+        opacity: 1;  
+    } 
 }
 
   
@@ -117,23 +114,23 @@ body{
             display:inline-block;
         }
         label:nth-child(4){
-            -webkit-animation: load 3s 200ms infinite ease-in-out;
-            animation: load 3s 200ms infinite ease-in-out;
+            -webkit-animation: load 3s 200ms infinite ease-in-out forwards;
+            animation: load 3s 200ms infinite ease-in-out forwards;
             color: $color-tertiary;
         }
         label:nth-child(3){
-            -webkit-animation: load 3s 300ms infinite ease-in-out;
-            animation: load 3s 300ms infinite ease-in-out;
+            -webkit-animation: load 3s 300ms infinite ease-in-out forwards;
+            animation: load 3s 300ms infinite ease-in-out forwards;
             color: $color-secondary;
         }
         label:nth-child(2){
-            -webkit-animation: load 3s 400ms infinite ease-in-out;
-            animation: load 3s 400ms infinite ease-in-out;
+            -webkit-animation: load 3s 400ms infinite ease-in-out forwards;
+            animation: load 3s 400ms infinite ease-in-out forwards;
             color: $color-primary;
         }
         label:nth-child(1){
-            -webkit-animation: load 3s 500ms infinite ease-in-out;
-            animation: load 3s 500ms infinite ease-in-out;
+            -webkit-animation: load 3s 500ms infinite ease-in-out forwards;
+            animation: load 3s 500ms infinite ease-in-out forwards;
             @include hoverlike;
         }
     }
@@ -313,7 +310,6 @@ a:link
             font-size: 0.7em;
         }
     }
-
 }
 #bloc-page-carte{
     .retour{
@@ -423,6 +419,7 @@ a:link
             width: 80%;
             overflow: hidden;
             transform: translateX(-1%);
+            -webkit-transform: translateX(-1%);
             transition: transform 2s ease-in;
             
         }
@@ -430,6 +427,7 @@ a:link
         &:hover > .suggestion__like{
             visibility: visible;
             transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
             transition: transform 0.5s ease-in;
             .suggestion__like--check{
                 transform: rotate(360deg);
@@ -459,6 +457,10 @@ a:link
         }
         .suggestion__plat{
             margin-bottom: 5px;
+            .titre{
+                font-weight: 900;
+                margin: 0;
+            }
         }
         .suggestion__description{
             display: flex;
@@ -467,6 +469,7 @@ a:link
             .legende{
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                overflow: hidden;
             }
             .prix{
                 position: relative;
