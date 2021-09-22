@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @keyframes load {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
   }
@@ -62,6 +62,7 @@ body {
 }
 .loader .loader-inner {
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   top: 50%;
   position: absolute;
   width: calc(100% - 200px);
@@ -370,21 +371,24 @@ a:link {
   margin-top: 5px;
 }
 .pagemenu .menu-box-entrées {
-  animation: epd 700ms ease-in;
-  -moz-animation: epd 700ms ease-in;
-  -webkit-animation: epd 700ms ease-in;
+  opacity: 0;
+  animation: epd 700ms ease-in forwards;
+  -moz-animation: epd 700ms ease-in forwards;
+  -webkit-animation: epd 700ms ease-in forwards;
   animation-delay: 100ms;
 }
 .pagemenu .menu-box-plats {
-  animation: epd 700ms ease-in;
-  -moz-animation: epd 700ms ease-in;
-  -webkit-animation: epd 700ms ease-in;
+  opacity: 0;
+  animation: epd 700ms ease-in forwards;
+  -moz-animation: epd 700ms ease-in forwards;
+  -webkit-animation: epd 700ms ease-in forwards;
   animation-delay: 500ms;
 }
 .pagemenu .menu-box-desserts {
-  animation: epd 700ms ease-in;
-  -moz-animation: epd 700ms ease-in;
-  -webkit-animation: epd 700ms ease-in;
+  opacity: 0;
+  animation: epd 700ms ease-in forwards;
+  -moz-animation: epd 700ms ease-in forwards;
+  -webkit-animation: epd 700ms ease-in forwards;
   animation-delay: 1000ms;
 }
 .pagemenu .suggestion {
