@@ -64,10 +64,10 @@ $logo-title-font: "Shrikhand", arial;
   }
 @keyframes like{
     0%{
-        transform: translateX(0);
+        transform: translateX(0%);
     }
     100%{
-        transform: translateX(1);
+        transform: translateX(100%);
     }
 }
 @keyframes epd{
@@ -166,7 +166,7 @@ a:link
     padding: 20px;
     padding-bottom: 50px;
     h2{
-        margin: none;
+        margin: 0;
     }
     p{
         color: grey;

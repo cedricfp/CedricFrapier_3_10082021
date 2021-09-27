@@ -25,10 +25,10 @@
 }
 @keyframes like {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(1);
+    transform: translateX(100%);
   }
 }
 @keyframes epd {
@@ -134,7 +134,7 @@ a:link {
   padding-bottom: 50px;
 }
 #introduction h2 {
-  margin: none;
+  margin: 0;
 }
 #introduction p {
   color: grey;
